@@ -1,0 +1,19 @@
+[KFileDialog Settings]
+Recent Files[$e]=CyberSocDesktop.jpg,file:///usr/share/wallpapers/CyberSocDesktop.jpg
+Recent URLs[$e]=file:///usr/share/wallpapers/
+detailViewIconSize=0
+
+[PlasmaViews][Panel 2][Defaults]
+thickness=36
+
+[PlasmaViews][Panel 2][Horizontal1280]
+thickness=36
+
+[PlasmaViews][Panel 2][Horizontal2560]
+thickness=36
+
+[ScreenConnectors]
+0=Virtual1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/desktop-base.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

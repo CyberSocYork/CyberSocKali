@@ -1,0 +1,5 @@
+[Elan Touchpad]
+clickMethodAreas=true
+clickMethodClickfinger=false
+naturalScroll=true
+tapToClick=true

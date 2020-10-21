@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf "Begin install of evil-winrm ...\n"
+gem install evil-winrm

@@ -1,0 +1,12 @@
+[2020-10-21 12:26:41] lb clean --purge
+[1;37mP[0m: Executing auto/clean script.
+[2020-10-21 12:26:41] lb clean noauto --purge
+[1;37mP[0m: Executing auto/clean script.
+[2020-10-21 12:26:42] lb clean noauto --all
+P: Cleaning chroot
+[1;37mP[0m: Executing auto/clean script.
+[2020-10-21 12:27:16] lb clean noauto --cache
+[2020-10-21 12:27:17] lb config -a amd64 --distribution kali-rolling -- --variant cybersoc
+[1;37mP[0m: Executing auto/config script.
+cp: cannot copy cyclic symbolic link 'kali-config/variant-cybersoc/includes.chroot/etc/skel/CyberSocKali/kali-config/variant-cybersoc'
+cp: cannot copy cyclic symbolic link 'kali-config/variant-cybersoc/includes.chroot/etc/skel/CyberSocKali/kali-config/variant-default'

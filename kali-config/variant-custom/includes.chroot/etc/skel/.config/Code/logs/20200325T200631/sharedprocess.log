@@ -1,0 +1,8 @@
+[2020-03-25 20:06:34.657] [sharedprocess] [info] main {"machineId":"384d0ab49987a86714d5e2e8e18ea66d6f9aa0de97b30d31bc917e94f862dcbb","windowId":2}
+[2020-03-25 20:06:36.869] [sharedprocess] [info] Installing extension: ms-python.python
+[2020-03-25 20:06:44.446] [sharedprocess] [info] Downloaded extension: ms-python.python /tmp/e7d59384-99d6-4bbe-aa83-0a4a05827d92
+[2020-03-25 20:06:46.818] [sharedprocess] [info] Extracted extension to /home/kali/.vscode/extensions/.ms-python.python-2020.3.69010: ms-python.python
+[2020-03-25 20:06:46.818] [sharedprocess] [info] Renamed to /home/kali/.vscode/extensions/ms-python.python-2020.3.69010
+[2020-03-25 20:06:46.821] [sharedprocess] [info] Installation completed. ms-python.python
+[2020-03-25 20:06:46.827] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2020-03-25 20:07:14.667] [sharedprocess] [info] Starting to clean up unused language packs.

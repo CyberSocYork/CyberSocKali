@@ -1,0 +1,161 @@
+# You always want those
+kali-linux-core
+kali-desktop-live
+
+# Kali-Linux-Everything
+kali-linux-core
+kali-linux-default
+kali-linux-large
+# Kali-linux-nethunter
+	kali-themes
+#	qt5ct			# Break icons (No idea)
+#	qt5-gtk2-platformtheme
+	aircrack-ng
+	apache2
+	armitage
+	autossh
+	backdoor-factory
+	beef-xss
+	burpsuite
+	dbd
+	device-pharmer
+	dnsmasq
+	dnsutils
+	dsniff
+	ettercap-text-only
+	# ettercap-graphical	# Causes weird dependency issues
+	exploitdb
+	florence
+	gpsd
+	hostapd
+	isc-dhcp-server
+	iw
+	kismet
+	kismet-plugins
+	libffi-dev
+	libssl-dev
+	macchanger
+	mdk3
+	metasploit-framework
+	mfoc
+	mitmproxy
+	nethunter-utils
+	nishang
+	nmap
+	openssh-server
+	openvpn
+	p0f
+	php
+	pixiewps
+	postgresql
+	ptunnel
+	python3-dnspython
+	python3-lxml
+	python3-m2crypto
+	python3-mako
+	python3-netaddr
+	python3-pcapy
+	python3-pip
+	python3-setuptools
+	python3-twisted
+	recon-ng
+	rfkill
+	socat
+	sox
+	sqlmap
+	sslsplit
+	tcpdump
+	tcptrace
+	tigervnc-standalone-server
+	tinyproxy
+	tshark
+	wifite
+	wipe
+	wireshark
+	wpasupplicant
+	zip
+
+kali-tools-802-11
+kali-tools-bluetooth
+kali-tools-database
+kali-tools-exploitation
+kali-tools-forensics
+kali-tools-fuzzing
+kali-tools-gpu
+kali-tools-hardware
+kali-tools-headless
+kali-tools-information-gathering
+kali-tools-passwords
+kali-tools-post-exploitation
+kali-tools-reporting
+kali-tools-reverse-engineering
+kali-tools-rfid
+kali-tools-sdr
+kali-tools-sniffing-spoofing
+kali-tools-social-engineering
+kali-tools-crypto-stego
+kali-tools-top10
+kali-tools-voip
+kali-tools-vulnerability
+kali-tools-web
+kali-tools-windows-resources
+kali-tools-wireless
+android-sdk
+bruteforce-salted-openssl
+brutespray
+capstone-tool
+changeme
+chaosreader
+crack
+device-pharmer
+dislocker
+exploitdb-bin-sploits
+exploitdb-papers
+freeradius
+goldeneye
+htshells
+ident-user-enum
+ismtp
+kali-community-wallpapers
+kali-legacy-wallpapers
+knocker
+linux-exploit-suggester
+nmapsi4
+o-saft
+openvas
+parsero
+payloadsallthethings
+phpggc
+pnscan
+pompem
+princeprocessor
+set
+shed
+shellnoob
+shellter
+teamsploit
+testssl.sh
+veil
+websploit
+wig
+
+# Graphical desktop
+kali-desktop-kde
+wmctrl
+
+# Stuff I Like
+neofetch
+# code - Added in a hook
+qemu-system
+aqemu
+checksec
+chntpw
+
+# Other requirements
+default-jdk
+default-jre
+curl
+git
+live-build
+cdebootstrap
+
