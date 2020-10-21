@@ -6,13 +6,15 @@ kali-desktop-live
 kali-desktop-kde
 wmctrl
 
-# Stuff I Like
+# Custom
 neofetch
 exa
 qemu-system
 aqemu
 checksec
 chntpw
+fzf
+rlwrap
 
 # Build requirements
 default-jdk

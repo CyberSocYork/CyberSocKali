@@ -1,8 +1,0 @@
-[Desktop Entry]
-Exec=if [ -e /sys/class/backlight/amdgpu_bl0 ] ; then expr $(cat /sys/class/backlight/amdgpu_bl0/max_brightness) / 3 | sudo tee /sys/class/backlight/amdgpu_bl0/brightness; fi
-X-DBUS-StartupType=wait
-Name=Set Backlight
-Type=Service
-X-KDE-StartupNotify=false
-OnlyShowIn=KDE;
-X-KDE-autostart-phase=1
