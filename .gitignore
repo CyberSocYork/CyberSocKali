@@ -10,10 +10,7 @@ chroot.packages.live
 .stage
 .lock
 .build/
-config/binary
-config/bootstrap
-config/common
-config/source
+config/
 simple-cdd/debian-cd
 simple-cdd/profiles/kali.downloads
 simple-cdd/tmp
