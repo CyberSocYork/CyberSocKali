@@ -21,7 +21,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/CyberSocDesktop.jpg
+Image=file:///usr/share/wallpapers/CyberSocDesktop.png
 
 [Containments][2]
 activityId=
@@ -127,3 +127,4 @@ immutability=2
 
 [ScreenMapping]
 itemsOnDisabledScreens=
+screenMapping=desktop:/CyberSocDesktop.png,0,desktop:/CyberSocKali,0,desktop:/background.svg,0
