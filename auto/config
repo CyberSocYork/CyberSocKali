@@ -121,6 +121,7 @@ if [ -n "$enable_pu" ]; then
 fi
 
 lb config noauto \
+	$(if [ ! -z "$(curl --head -s http://[::1]:3142)" ]; then echo "--apt-http-proxy \"http://[::1]:3142\""; fi) \
 	--distribution "$dist" \
 	--debian-installer-distribution "$dist" \
 	--archive-areas "main contrib non-free" \
@@ -135,7 +136,7 @@ lb config noauto \
 	--mirror-debian-installer "$kali_mirror" \
 	--mirror-binary "$public_kali_mirror" \
 	--iso-application "Kali Linux" \
-	--iso-publisher "Kali" \
+	--iso-publisher "Cybersoc" \
 	--iso-volume "Kali Live" \
 	--linux-packages linux-image \
 	--memtest memtest86 \

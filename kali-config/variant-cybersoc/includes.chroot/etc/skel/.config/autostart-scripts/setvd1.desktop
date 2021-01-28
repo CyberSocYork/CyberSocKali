@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=sleep 2; wmctrl -s 4
+X-DBUS-StartupType=wait
+Name=Set VD #1
+Type=Service
+X-KDE-StartupNotify=false
+OnlyShowIn=KDE;
+X-KDE-autostart-phase=1

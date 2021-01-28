@@ -2,21 +2,24 @@
 kali-linux-core
 kali-desktop-live
 
+# Kali Packages
+# kali-linux-everything
+kali-linux-nethunter
+
 # Graphical desktop
 kali-desktop-kde
 wmctrl
 
-# Custom
+# Stuff I Like
 neofetch
 exa
 qemu-system
-aqemu
 checksec
 chntpw
 fzf
 rlwrap
 
-# Build requirements
+# Other requirements
 default-jdk
 default-jre
 curl

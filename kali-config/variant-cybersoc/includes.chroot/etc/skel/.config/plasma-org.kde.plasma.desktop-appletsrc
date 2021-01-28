@@ -23,6 +23,23 @@ DialogWidth=720
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/CyberSocDesktop.png
 
+[Containments][15]
+activityId=9b7c4bd3-517c-485d-b42f-397808c24e0d
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][15][ConfigDialog]
+DialogHeight=535
+DialogWidth=720
+
+[Containments][15][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/CyberSocDesktop.jpg
+SlidePaths=/usr/share/wallpapers
+
 [Containments][2]
 activityId=
 formfactor=2
@@ -116,14 +133,14 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][7][Applets][17][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][7][General]
-extraItems=org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard
-knownItems=org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard
+extraItems=org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.kupapplet
+knownItems=org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.kupapplet
 
 [General]
-immutability=2
+immutability=1
 
 [ScreenMapping]
 itemsOnDisabledScreens=

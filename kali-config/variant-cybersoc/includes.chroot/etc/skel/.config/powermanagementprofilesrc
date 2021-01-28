@@ -1,9 +1,6 @@
 [AC]
 icon=battery-charging
 
-[AC][DPMSControl]
-idleTime=600
-
 [AC][DimDisplay]
 idleTime=300000
 
@@ -51,7 +48,7 @@ triggerLidActionWhenExternalMonitorPresent=false
 [LowBattery][SuspendSession]
 idleTime=300000
 suspendThenHibernate=false
-suspendType=1
+suspendType=0
 
 [migration]
 kdedShortcutMigration=true
