@@ -3,8 +3,7 @@ kali-linux-core
 kali-desktop-live
 
 # Kali Packages
-# kali-linux-everything
-kali-linux-nethunter
+kali-linux-everything
 
 # Graphical desktop
 kali-desktop-kde
@@ -18,6 +17,7 @@ checksec
 chntpw
 fzf
 rlwrap
+ncdu
 
 # Other requirements
 default-jdk
