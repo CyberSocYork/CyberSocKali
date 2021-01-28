@@ -12,3 +12,5 @@
 - Run `sudo ./Docker/dockerRun.sh` to roll the iso
 - The ISO will be in the `images` directory
 - NOTE: You only have to build once, any changes in the `kali-config` directory will be reflected in subsequent builds
+
+### Based on the Kali Linux [live-build-config](https://gitlab.com/kalilinux/build-scripts/live-build-config)
