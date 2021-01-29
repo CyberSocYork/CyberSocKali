@@ -18,6 +18,8 @@ chntpw
 fzf
 rlwrap
 ncdu
+python-is-python3
+python2
 
 # Other requirements
 default-jdk
