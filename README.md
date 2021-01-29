@@ -35,7 +35,7 @@ To reduce the size of the final image, change the metapackage used as a base. Th
 
 - If your system has `dpkg`:
   - Install `live-build` and `cdebootstrap` from your distro's repositories.
-  - Run `sudo ./build.sh --variant cybersoc --verbose`. This will download all the packages from the official Kali Linux repositories, and build the image.
+  - Run `sudo ./build.sh --verbose`. This will download all the packages from the official Kali Linux repositories, and build the image.
 - If your system does not have `dpkg`, but is Linux-based:
   - Install and start [docker](https://www.docker.com/).
   - Run `sudo ./Docker/dockerBuild.sh`. This will create the Kali Linux docker environment to build the image in. This command only needs to be run once, subsequent builds will re-use the same docker container.
