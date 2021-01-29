@@ -121,7 +121,7 @@ if [ -n "$enable_pu" ]; then
 fi
 
 lb config noauto \
-	$(if [ ! -z "$(curl --head -s http://[::1]:3142)" ]; then echo "--apt-http-proxy \"http://[::1]:3142\""; fi) \
+	$(if [ ! -z "$(curl --head -s http://localhost:3142)" ]; then echo "--apt-http-proxy \"http://localhost:3142\""; fi) \
 	--distribution "$dist" \
 	--debian-installer-distribution "$dist" \
 	--archive-areas "main contrib non-free" \
