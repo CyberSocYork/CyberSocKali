@@ -16,3 +16,5 @@ simple-cdd/tmp
 apt-cacher-ng/*
 live-*
 build.log
+
+apt-cacher-ng/
