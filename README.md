@@ -13,6 +13,7 @@ A customised build of [Kali Linux](https://www.kali.org/), created by and for [C
   - [Linpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
   - [chntpw](https://gitlab.com/kalilinux/packages/chntpw)
   - [checksec](https://github.com/slimm609/checksec.sh)
+  - [Evil-WinRM](https://github.com/Hackplayers/evil-winrm)
 
 ## Usage
 

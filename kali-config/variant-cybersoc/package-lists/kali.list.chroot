@@ -20,6 +20,7 @@ rlwrap
 ncdu
 python-is-python3
 python2
+vim
 
 # Other requirements
 default-jdk
@@ -28,4 +29,5 @@ curl
 git
 live-build
 cdebootstrap
-
+ubuntu-dev-tools
+ruby-full
