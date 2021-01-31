@@ -302,3 +302,10 @@ if [ -f ~/.zsh/plugins/you-should-use.plugin.zsh ]; then
 else
     echo "you-should-use plugin not loaded"
 fi
+
+if type starship >/dev/null; then
+    eval "$(starship init zsh)"
+    RPROMPT=""
+else
+    prompt walters
+fi

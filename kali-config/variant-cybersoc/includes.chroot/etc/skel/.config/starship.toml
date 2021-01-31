@@ -1,0 +1,34 @@
+add_newline = false
+
+format="$all"
+
+[aws]
+disabled = true
+
+[battery]
+disabled = true
+
+[cmd_duration]
+min_time = 5_000
+show_milliseconds = true
+
+[directory]
+truncation_length = 8
+truncate_to_repo = true
+read_only_symbol= ' '
+
+[hostname]
+ssh_only = false
+
+[username]
+show_always = true
+format = "[$user]($style)@"
+
+[package]
+disabled = true
+
+[python]
+scan_for_pyfiles = false
+
+[cmake]
+symbol ="🛆 "
