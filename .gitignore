@@ -3,9 +3,7 @@ prepare.log
 binary
 images
 cache
-chroot
-chroot.packages.install
-chroot.packages.live
+chroot*
 .mirror
 .stage
 .lock
@@ -16,3 +14,5 @@ simple-cdd/profiles/kali.downloads
 simple-cdd/tmp
 .ssh/
 apt-cacher-ng/*
+live-*
+build.log
