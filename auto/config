@@ -136,8 +136,8 @@ lb config noauto \
 	--mirror-debian-installer "$kali_mirror" \
 	--mirror-binary "$public_kali_mirror" \
 	--iso-application "Kali Linux" \
-	--iso-publisher "Cybersoc" \
-	--iso-volume "Kali Live" \
+	--iso-publisher "CyberSoc" \
+	--iso-volume "CyberSoc Kali" \
 	--linux-packages linux-image \
 	--memtest memtest86 \
 	--bootappend-live "boot=live components quiet splash noeject" \
