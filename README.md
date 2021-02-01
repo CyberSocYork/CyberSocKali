@@ -13,7 +13,6 @@ A customised build of [Kali Linux](https://www.kali.org/), created by and for [C
   - [Linpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
   - [chntpw](https://gitlab.com/kalilinux/packages/chntpw)
   - [checksec](https://github.com/slimm609/checksec.sh)
-  - [Evil-WinRM](https://github.com/Hackplayers/evil-winrm)
 
 ## Usage
 
@@ -44,6 +43,9 @@ To reduce the size of the final image, change the metapackage used as a base. Th
 - The completed image will be placed in `images/`
 - If your system is not based on Linux:
   - Unfortunately, we cannot provide build instructions for you. The easiest way to build this is probably from inside a Kali Linux VM.
+
+## Contributing
+Please follow out [contributing guide](./CONTRIBUTING.md) to contribute to this repo.
 
 ---
 
