@@ -1,0 +1,16 @@
+#!/bin/sh 
+
+mkdir -p /tmp/alacritty
+cd /tmp/alacritty || exit 1
+wget "https://github.com/alacritty/alacritty/archive/v0.7.1.tar.gz" || (echo "Failed to download alacritty" && exit 1)
+tar xf "v0.7.1.tar.gz" || (echo "Failed to extract tar" && exit 1)
+cd "alacritty-0.7.1" || exit 1
+cargo build --release || (echo "Failed to build alacritty" && exit 1)
+install -Dm 755 "target/release/alacritty" "/usr/bin/alacritty" || (echo "Failed to install the alacritty binary" && exit 1)
+tic -xe alacritty,alacritty-direct "extra/alacritty.info" || (echo "Failed to install alacritty terminfo" && exit 1)
+install -Dm 644 "extra/logo/alacritty-term.svg" "/usr/share/pixmaps/Alacritty.svg" || (echo "Failed to install alacritty logo" && exit 1)
+desktop-file-install "extra/linux/Alacritty.desktop" || (echo "Failed to install alacritty desktop file" && exit 1)
+update-desktop-database || (echo "Failed to install alacritty desktop file" && exit 1)
+mkdir -p "/usr/local/share/man/man1"
+gzip -c "extra/alacritty.man" > "/usr/local/share/man/man1/alacritty.1.gz" || (echo "Failed to install alacritty manpage" && exit 1)
+

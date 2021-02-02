@@ -21,6 +21,14 @@ ncdu
 python-is-python3
 python2
 vim
+# Alacritty
+rustc
+cargo
+cmake
+pkg-config
+libfreetype6-dev
+libfontconfig1-dev
+libxcb-xfixes0-dev
 
 # Other requirements
 default-jdk
