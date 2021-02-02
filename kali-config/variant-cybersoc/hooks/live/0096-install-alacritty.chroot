@@ -1,8 +1,12 @@
 #!/bin/sh 
 
+latestTag=$(curl -s "https://api.github.com/repos/alacritty/alacritty/releases/latest" \
+    | grep '"tag_name":' \
+    | sed -E 's/.*"([^"]+)".*/\1/')
+
 mkdir -p /tmp/alacritty
 cd /tmp/alacritty || exit 1
-wget "https://github.com/alacritty/alacritty/archive/v0.7.1.tar.gz" || (echo "Failed to download alacritty" && exit 1)
+wget "https://github.com/alacritty/alacritty/archive/$latestTag.tar.gz" || (echo "Failed to download alacritty" && exit 1)
 tar xf "v0.7.1.tar.gz" || (echo "Failed to extract tar" && exit 1)
 cd "alacritty-0.7.1" || exit 1
 cargo build --release || (echo "Failed to build alacritty" && exit 1)
