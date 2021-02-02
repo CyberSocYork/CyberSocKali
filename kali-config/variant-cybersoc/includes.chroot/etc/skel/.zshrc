@@ -180,48 +180,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 fi
 
-alias cp="cp -av --reflink=auto"
-alias mv="mv -v"
-alias du="du -sh"
-alias rm="rm -rfv"
-alias mkdir="mkdir -p"
-alias less="less -r"
-alias more="less -r"
-alias reboot="sudo reboot"
-alias poweroff="sudo poweroff"
-alias btrfs-du="btrfs fi du -s --human-readable"
-alias btrfs-list="sudo btrfs subvolume list / -t"
-alias btrfs-df="btrfs filesystem df /"
-alias sudo="sudo "
-alias rsync="rsync -Pva"
-alias mount="sudo mount"
-alias umount="sudo umount"
-alias feh-svg="feh --magick-timeout 1"
-alias neofetch="clear; neofetch"
-alias aria2c="aria2c --file-allocation=none"
-alias zshrc-reload="reload-zshrc"
-alias xclip="xclip -selection clipboard"
-alias df="df -h"
-alias fex="nautilus ."
-alias ffprobe="ffprobe -hide_banner"
-alias ffmpeg="ffmpeg -hide_banner"
-alias ffplay="ffplay -hide_banner"
-alias ":q"="exit"
-alias sl=ls
-alias sensors="clear; sensors"
-alias -g sd="~/ScratchArea"
-alias -g dl="~/Downloads"
-alias -g "..."="../.."
-alias test="echo test"
-
-# Conditional Aliases
-if type exa >/dev/null; then
-    alias ls="exa -lhgbHm --git "
-    alias lst="exa -lhgbHmT --git"
-    alias lsa="exa -lhgbHma --git"
-else
-    alias ls="ls -lh --color"
-fi
 # Keybinds
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -245,6 +203,82 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "$key[Up]" up-line-or-beginning-search
 bindkey "$key[Down]" down-line-or-beginning-search
+
+# Aliases
+alias :q="exit"
+alias cp="cp -av --reflink=auto"
+alias dc="cd"
+alias df="df -h"
+alias du="du -sh"
+alias feh="feh --conversion-timeout 1"
+alias fex="dolphil ."
+alias less="less -r"
+alias mc="make clean"
+alias mi="make install"
+alias mkdir="mkdir -p"
+alias mm="make -j"
+alias more="less -r"
+alias mount="sudo mount"
+alias mv="mv -v"
+alias neofetch="clear; neofetch"
+alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
+alias rm="rm -rfv"
+alias rsync="rsync -Pva"
+alias sudo="sudo "
+alias umount="sudo umount"
+alias xclip="xclip -selection clipboard"
+alias zshrc-reload="reload-zshrc"
+
+# Global Aliases
+alias -g dl="~/Downloads"
+alias -g "..."="../.."
+alias -g "...."="../../.."
+alias -g "....."="../../../.."
+
+# ls aliases
+alias ls="exa -lhgbHm --git "
+alias lst="exa -lhgbHmT --git"
+alias lsa="exa -lhgbHma --git"
+alias lsat="exa -lhgbHmaT --git"
+alias sl=ls
+
+# Functions
+lls() {
+    clear
+    ls
+}
+
+mkcdir() {
+    mkdir -p -- "$1" &&
+        cd -P -- "$1"
+}
+
+reload-zshrc() {
+    source ~/.zshrc
+}
+
+ex() {
+    if [ -f $1 ]; then
+        case $1 in
+        *.tar*) tar xvf $1 ;;
+        *.bz2) bunzip2 $1 ;;
+        *.rar) unrar x $1 ;;
+        *.gz) gunzip $1 ;;
+        *.t*z*) tar xvf $1 ;;
+        *.zip) unzip $1 ;;
+        *.Z) uncompress $1 ;;
+        *.7z) 7z x $1 ;;
+        *) echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+cpufreq() {
+    watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
+}
 
 # setup key accordingly
 [[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"      beginning-of-line
@@ -273,34 +307,17 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 # Plugins
-if [ -f ~/.zsh/plugins/vi-mode.plugin.zsh ]; then
-    source ~/.zsh/plugins/vi-mode.plugin.zsh
-fi
+source ~/.zsh/plugins/vi-mode.plugin.zsh
+source ~/.zsh/plugins/git.plugin.zsh
+source ~/.zsh/plugins/globalias.plugin.zsh
+source ~/.zsh/plugins/you-should-use.plugin.zsh
 
-if grep -Fxq "arch" /etc/os-release; then
-    if [ -f ~/.zsh/plugins/git.plugin.zsh ]; then
-        source ~/.zsh/plugins/git.plugin.zsh
-    else
-        echo "archlinux plugin not loaded"
-    fi
-fi
-
-if [ -f ~/.zsh/plugins/globalias.plugin.zsh ]; then
-    source ~/.zsh/plugins/globalias.plugin.zsh
+# Starship prompt
+if type starship >/dev/null; then
+    eval "$(starship init zsh)"
+    RPROMPT=""
 else
-    echo "globalias plugin not loaded"
-fi
-
-if [ -f ~/.zsh/plugins/git.plugin.zsh ]; then
-    source ~/.zsh/plugins/git.plugin.zsh
-else
-    echo "git plugin not loaded"
-fi
-
-if [ -f ~/.zsh/plugins/you-should-use.plugin.zsh ]; then
-    source ~/.zsh/plugins/you-should-use.plugin.zsh
-else
-    echo "you-should-use plugin not loaded"
+    prompt walters
 fi
 
 if type starship >/dev/null; then
