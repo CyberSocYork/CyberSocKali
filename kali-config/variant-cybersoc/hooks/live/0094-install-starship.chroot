@@ -1,8 +1,14 @@
 #!/bin/sh
 
+latest=$(curl -s https://api.github.com/repos/starship/starship/releases/latest \
+        | grep "browser_download_url.*i686-unknown-linux.*\.tar\.gz" \
+	| grep -v "\.sha256" \
+        | cut -d : -f 2,3 \
+	| tr -d \")
+
 mkdir -p /tmp/starship
 cd /tmp/starship || exit 1
-wget "https://github.com/starship/starship/releases/download/v0.49.0/starship-i686-unknown-linux-musl.tar.gz" || exit 1
+wget $latest || exit 1
 tar xf "starship-i686-unknown-linux-musl.tar.gz" || exit 1
 if install -Dm 755 "./starship" "/usr/bin/starship"; then
     echo "Starship installed"
