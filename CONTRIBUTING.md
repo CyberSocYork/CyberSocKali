@@ -1,27 +1,21 @@
 # Contributing to CyberSoc Kali
 
-## Submitting Issues / Enhancements
-If you find any issues or think there is a useful tool missing, feel free to submit an issue.  
-This is the easiest way that you can help us to develop the ISO
+Thanks for wanting to contribute to our repo! Here are some guidelines we ask you to follow:
 
-## Making a change
-If you feel comfortable making a change yourself follow these steps, if not please use issue tab to submit a feature request.  
+## Issues
 
-**Note**: It is best to comment out `kali-linux-everything` in `./kali-config/variant-cybersoc/package-lists/kali.list.chroot` while you are testing any changes as this will massively reduce build time but uncomment before opening a pull request.
+If you find any issues with the ISO, please open an [issue](https://github.com/CyberSocYork/CyberSocKali/issues/new/choose). This will allow us to fix the issue as soon as possible. Please be as descriptive as possible in your issue, as this will help us to reproduce the problem
 
-### Fork the repo
-Fork using the command line:
+## Feature requests
 
-- [Fork the repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository) and make the changes locally without affecting the repo until you are ready to submit the changes
+If there is a change you would like to see made to anything in this repo (the package list, the configuration of the image, or the build process), please open an issue requesting this.
 
-Fork using GitHub Desktop:
+## Pull requests
 
-- Follow [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/getting-started-with-github-desktop) to setup GitHub Desktop
-- Once Desktop is set up, you can use it to [fork the repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/cloning-and-forking-repositories-from-github-desktop)
+If you feel comfortable working on a change or fix yourself, please feel free to send us a pull request. We suggest that you open an issue discussing the change before you start work, as we may decide to reject changes, and we do not want people wasting their time. We will still review pull requests that do not have a related issue, but please be aware that we may reject your change.
 
-### Make the changes
-Add or change any files that you think would improve the ISO.
+---
 
-### Open a pull request
-Once you are happy with your changes, submit a pull request so we can review the changes you have made.  
-It is important that you detail the changes you have added in the PR to make it as easy as possible for us to review the changes.
+## Licensing
+
+All contributions to this repository will be licensed under the GNU GPL.
