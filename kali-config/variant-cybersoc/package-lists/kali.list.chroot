@@ -9,18 +9,20 @@ kali-linux-everything
 kali-desktop-kde
 wmctrl
 
-# Stuff I Like
-neofetch
-exa
-qemu-system
+# Cybersoc additions
 checksec
 chntpw
+exa
+feh 
 fzf
-rlwrap
 ncdu
+neofetch
+neovim
 python-is-python3
 python2
-vim
+qemu-system
+rlwrap
+
 # Alacritty
 rustc
 cargo

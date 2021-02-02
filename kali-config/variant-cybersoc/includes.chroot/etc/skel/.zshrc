@@ -307,19 +307,13 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 # Plugins
-source ~/.zsh/plugins/vi-mode.plugin.zsh
+source ~/.zsh/plugins/zsh-vim-mode.plugin.zsh
 source ~/.zsh/plugins/git.plugin.zsh
 source ~/.zsh/plugins/globalias.plugin.zsh
 source ~/.zsh/plugins/you-should-use.plugin.zsh
 
-# Starship prompt
-if type starship >/dev/null; then
-    eval "$(starship init zsh)"
-    RPROMPT=""
-else
-    prompt walters
-fi
 
+# Starship prompt
 if type starship >/dev/null; then
     eval "$(starship init zsh)"
     RPROMPT=""
