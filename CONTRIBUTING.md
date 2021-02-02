@@ -20,7 +20,8 @@ If you feel comfortable working on a change or fix yourself, please feel free to
   - For example, if a commit adds the package `vim`, a suitable commit message would be `Added pacakge vim`, not `Updated kali-config/variant-cybersoc/package-lists/kali.list.chroot`.
 - Please do not use too many commits.
   - For example, if a change or fix requires changes in 3 files, these should all be in one commit, with a message describing the entire fix, rather than three separate commits.
-If your pull request does not meet these commit guidelines, we may ask you to amend your commit history (see [amending](https://docs.github.com/en/github/committing-changes-to-your-project/changing-a-commit-message) and [Text](https://docs.github.com/en/github/using-git/about-git-rebase)) before we accept it.
+
+If your pull request does not meet these commit guidelines, we may ask you to amend your commit history (see [amending](https://docs.github.com/en/github/committing-changes-to-your-project/changing-a-commit-message) and [rebasing](https://docs.github.com/en/github/using-git/about-git-rebase)) before we accept it.
 
 ---
 
