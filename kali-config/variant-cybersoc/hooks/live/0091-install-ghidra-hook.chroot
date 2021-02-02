@@ -1,8 +1,11 @@
 #!/bin/sh
 
+latest="https://ghidra-sre.org/$(curl -s "https://ghidra-sre.org/" \
+	| grep "\"ghidra.*\.zip.*Download Ghidra" \
+	| sed "s/.*href=\"//;s/\".*//")"
 printf "Begin download of ghidra...\n"
 
-if curl -o /var/tmp/ghidra.zip -L https://ghidra-sre.org/ghidra_9.1.2_PUBLIC_20200212.zip; then	# Using curl to download the zipped archive
+if curl -o /var/tmp/ghidra.zip -L $latest; then	# Using curl to download the zipped archive
     printf "Create install folder...\n" &&	
     mkdir -p /usr/share/ghidra &&	# Create a directory for the extracted files
     printf "Unzipping \"ghidra.zip\"" &&
