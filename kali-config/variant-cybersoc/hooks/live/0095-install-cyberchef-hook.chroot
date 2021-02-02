@@ -1,0 +1,24 @@
+#!/bin/sh
+
+printf "Begin download of CyberChef...\n"
+
+release=$(curl -s https://api.github.com/repos/gchq/CyberChef/releases/latest \
+	| grep "browser_download_url.*\.zip" \
+	| cut -d : -f 2,3 \
+	| tr -d \")
+
+if curl -o /var/tmp/CyberChef.zip -L $release; then	# Using curl to download the zipped archive
+    printf "Create install folder...\n" &&	
+    mkdir -p /usr/share/CyberChef &&	# Create a directory for the extracted files
+    printf "Unzipping \"CyberChef.zip\"" &&
+    unzip /var/tmp/CyberChef.zip -d /usr/share/CyberChef &&	# Unzip to the newly created directory
+    printf "Removing temporary files...\n" &&
+    rm -fv /var/tmp/CyberChef.zip &&    # Removing temporary files
+    file=$(ls /usr/share/CyberChef | grep "CyberChef.*\.html") &&	# Getting the name of the current release
+    printf "Adding Firefox bookmark..." &&
+    echo "item.20.title=CyberChef\nitem.20.link=file:///usr/share/CyberChef/$file" >> /usr/lib/firefox-esr/distribution/distribution.ini &&    # Adding the bookmark link
+    printf "Done!\n"
+else
+    printf 'curl failed with error code "%d" (check the manual)\n' "$?" >&2
+    exit 1
+fi
