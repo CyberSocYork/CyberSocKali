@@ -14,6 +14,14 @@ If there is a change you would like to see made to anything in this repo (the pa
 
 If you feel comfortable working on a change or fix yourself, please feel free to send us a pull request. We suggest that you open an issue discussing the change before you start work, as we may decide to reject changes, and we do not want people wasting their time. We will still review pull requests that do not have a related issue, but please be aware that we may reject your change.
 
+### Commit guidelines
+
+- Please give commits descriptive messages.
+  - For example, if a commit adds the package `vim`, a suitable commit message would be `Added pacakge vim`, not `Updated kali-config/variant-cybersoc/package-lists/kali.list.chroot`.
+- Please do not use too many commits.
+  - For example, if a change or fix requires changes in 3 files, these should all be in one commit, with a message describing the entire fix, rather than three separate commits.
+If your pull request does not meet these commit guidelines, we may ask you to amend your commit history (see [amending](https://docs.github.com/en/github/committing-changes-to-your-project/changing-a-commit-message) and [Text](https://docs.github.com/en/github/using-git/about-git-rebase)) before we accept it.
+
 ---
 
 ## Licensing
