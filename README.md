@@ -10,7 +10,8 @@ A customised build of [Kali Linux](https://www.kali.org/), created by and for [C
 - Custom CyberSoc-branded wallpaper.
 - Some added tools:
   - [Ghidra](https://github.com/NationalSecurityAgency/ghidra)
-  - [Linpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+  - [LinPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+  - [WinPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
   - [chntpw](https://gitlab.com/kalilinux/packages/chntpw)
   - [checksec](https://github.com/slimm609/checksec.sh)
 
@@ -45,6 +46,7 @@ To reduce the size of the final image, change the metapackage used as a base. Th
   - Unfortunately, we cannot provide build instructions for you. The easiest way to build this is probably from inside a Kali Linux VM.
 
 ## Contributing
+
 Please follow out [contributing guide](./CONTRIBUTING.md) to contribute to this repo.
 
 ---
