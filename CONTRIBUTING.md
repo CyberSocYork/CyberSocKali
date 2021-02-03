@@ -12,7 +12,11 @@ If there is a change you would like to see made to anything in this repo (the pa
 
 ## Pull requests
 
-If you feel comfortable working on a change or fix yourself, please feel free to send us a pull request. We suggest that you open an issue discussing the change before you start work, as we may decide to reject changes, and we do not want people wasting their time. We will still review pull requests that do not have a related issue, but please be aware that we may reject your change.
+If you feel comfortable working on a change or fix yourself, please feel free to send us a pull request.
+
+We suggest that you open an issue discussing the change, to give us the opportunity to make comments on the change before you start work, as we may decide to reject changes, and we do not want people wasting their time. We will still review pull requests that do not have a related issue, but please be aware that we may reject your change.
+
+Note that this does not mean you should spam the issue tracker just to meet this suggestion. If you have already written your change, or if it is so small that the amount of effort is negligible, an issue is not needed.
 
 ### Commit guidelines
 
