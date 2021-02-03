@@ -3,12 +3,13 @@
 latestTag=$(curl -s "https://api.github.com/repos/alacritty/alacritty/releases/latest" \
     | grep '"tag_name":' \
     | sed -E 's/.*"([^"]+)".*/\1/')
+latestRelease=$(echo $latestTag | cut -c2-)
 
 mkdir -p /tmp/alacritty
 cd /tmp/alacritty || exit 1
 wget "https://github.com/alacritty/alacritty/archive/$latestTag.tar.gz" || (echo "Failed to download alacritty" && exit 1)
-tar xf "v0.7.1.tar.gz" || (echo "Failed to extract tar" && exit 1)
-cd "alacritty-0.7.1" || exit 1
+tar xf "$latestTag.tar.gz" || (echo "Failed to extract tar" && exit 1)
+cd "alacritty-$latestRelease" || exit 1
 cargo build --release || (echo "Failed to build alacritty" && exit 1)
 install -Dm 755 "target/release/alacritty" "/usr/bin/alacritty" || (echo "Failed to install the alacritty binary" && exit 1)
 tic -xe alacritty,alacritty-direct "extra/alacritty.info" || (echo "Failed to install alacritty terminfo" && exit 1)
