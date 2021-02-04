@@ -1,0 +1,27 @@
+{
+  "policies": {
+    "DisplayBookmarksToolbar": true,
+    "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "Homepage": {
+      "URL": "https://cybersoc.co.uk",
+      "Locked": false,
+      "StartPage": "homepage"
+    },
+    "DisableTelemetry": true,
+    "NetworkPrediction": false,
+    "DNSOverHTTPS": {
+      "Enabled": false
+    },
+    "CaptivePortal": false,
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": true,
+      "Highlights": false,
+      "Pocket": false,
+      "Snippets": false,
+      "Locked": false
+    }
+  }
+}
