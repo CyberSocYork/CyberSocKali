@@ -8,4 +8,4 @@ Autolock=false
 Theme=org.kde.breezedark.desktop
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/CyberSocDesktop.jpg
+Image=/usr/share/wallpapers/CyberSocDesktop.png

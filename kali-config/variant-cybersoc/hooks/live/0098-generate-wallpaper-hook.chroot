@@ -1,0 +1,6 @@
+#!/bin/sh
+
+apt install -y inkscape
+inkscape -w 3840 -h 2160 /usr/share/wallpapers/CyberSocDesktop.svg --export-filename /usr/share/wallpapers/CyberSocDesktop.png
+apt remove -y inkscape
+apt auto-remove -y

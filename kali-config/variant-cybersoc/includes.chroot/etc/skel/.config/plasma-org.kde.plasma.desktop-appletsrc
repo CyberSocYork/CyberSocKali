@@ -37,7 +37,7 @@ DialogHeight=535
 DialogWidth=720
 
 [Containments][15][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/CyberSocDesktop.jpg
+Image=file:///usr/share/wallpapers/CyberSocDesktop.png
 SlidePaths=/usr/share/wallpapers
 
 [Containments][2]
