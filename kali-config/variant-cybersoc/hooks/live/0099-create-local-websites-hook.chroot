@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Please include http(s) and a trailing "/"" if just domain name
+urls=("https://gchq.github.io/CyberChef/" "https://gtfobins.github.io/" "https://lolbas-project.github.io/")
+names=("CyberChef" "GTFOBINS" "LOLBAS")
+
+x=$(cat /usr/lib/firefox-esr/distribution/distribution.ini | grep "item\.[0-9]*\." | tail -1 | grep -o "[0-9]*" | head -1)
+
+for index in ${!urls[*]}; do
+    url=${urls[$index]}
+    name=${names[$index]}
+    x=$(($x + 5))
+    saveLocation=$(echo "$url" | grep -oP '(?<=\://).*(?=/)')
+    wget --mirror --convert-links --html-extension $url -P /usr/share/ -o /dev/null
+    link=$(find /usr/share/$saveLocation | grep index.html | awk '{ print length(), $0 | "sort -n" }' | head -1 | cut -d\  -f2)
+    printf "\nitem.$x.title=$name\nitem.$x.link=file://$link\n" >> /usr/lib/firefox-esr/distribution/distribution.ini
+done
