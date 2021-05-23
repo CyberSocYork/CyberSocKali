@@ -81,6 +81,9 @@ case "$arch" in
     i386)
 	lb_opts="$lb_opts --debian-installer live --linux-flavours 686-pae"
     ;;
+    arm64)
+	lb_opts="$lb_opts --bootloaders grub-efi --uefi-secure-boot disable"
+    ;;
     armel|armhf)
 	lb_opts="$lb_opts --binary-images hdd --binary-filesystem ext4 --chroot-filesystem none"
     ;;
@@ -104,9 +107,9 @@ esac
 # Drop all files that a former run might have put into place
 for file in $(cd kali-config && find ./common ./variant-* -type f); do
     file=${file#./*/}
-    rm -f config/$file
+    rm -fv config/$file
 done
-rm -f config/archives/kali-proposed-updates.list.*
+rm -fv config/archives/kali-proposed-updates.list.*
 
 # Copy over all files from official kali configuration
 cp -rT kali-config/common config
